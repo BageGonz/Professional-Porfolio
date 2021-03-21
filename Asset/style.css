@@ -12,15 +12,15 @@ body {
   flex-direction: row;
   padding: 6px;
   text-align: left;
-  background:#30343C;
-  color: #30343C;
-  font-size: 10px;
+  background: var(--head);
+  color: var(--head);
+  
 }
 
 .solid {
   border-style: solid;
-  background-color:#92CCCE;
-  border-color:#92CCCE ;
+  background-color: var(--light);
+  border-color: var(--light) ;
   padding: 10px;
   font-size: 30px;
 
@@ -30,10 +30,11 @@ body {
 a {
   display: inline;
   text-decoration: underline;
-  color:#92CCCE ;
+  color: var(--light) ;
 }
 
 nav {
+  flex-wrap: wrap;
   padding-left: 50%;
   font-size: 20px;
   text-align: right;
@@ -58,7 +59,57 @@ nav a:hover {
   color: var(--head);
 }
 
-img {
-
-
+img { 
+  width: 100%;
+  height: auto;
 }
+.boder{
+  position: relative;
+}
+
+.bottomright {
+  background-color: var(--light);
+  border-color: var(--light) ;
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+div.picture {
+  border: 1px solid var(--light);
+}
+
+div.picture img {
+  width: 100%;
+  height: auto;
+}
+
+div.picture:hover {
+  border: 1px solid var(--light);
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+  box-sizing: border-box;
+}
+
+div.aside {
+  padding: 15px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
