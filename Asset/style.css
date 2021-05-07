@@ -2,57 +2,69 @@
   --light: #92CCCE;
   --head: #30343C;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family:  Arial, Helvetica, sans-serif;
   margin: 0;
-  color: var(--head);
+  background-color: lightgrey;
 }
 
-.header {
+header {
+  z-index: 9999;
+  padding: 20px 35px;
+  background-color: var(--head);
   display: flex;
-  flex-direction: row;
-  padding: 6px;
-  background: var(--head);
-  color: var(--head);
-  
-}
-
-.solid {
-  border-style: solid;
-  background-color: var(--light);
-  border-color: var(--light) ;
-  padding: 10px;
-  font-size: 30px;
-
-
-}
-
-a {
-  display: inline;
-  text-decoration: underline;
-  color: var(--light) ;
-  position: relative;
-}
-
-nav {
+  justify-content: space-between;
   flex-wrap: wrap;
-  padding-left: 50%;
-  font-size: 20px;
-  text-align: right;
-  padding-top: 30px;
+  position: -webkit-sticky;
+  top: 0;
+  background-size: cover;
+  background-position: 80%;
+  background-attachment: fixed;
 }
 
-nav a {
+header h1 {
+  font-weight: bold;
+  font-size: 36px;
+  color: var(--head);
+  background-color: #92CCCE;
+  padding: 10px;
+}
+
+ header a {
   text-decoration: none;
-  padding: 5px 10px;
   color: var(--light);
-  margin-right: 10px;
+} 
+
+header nav {
+  margin: 7px 0;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul li a {
+  padding: 10px 15px;
+  font-weight: lighter;
+  font-size: 1.55vw;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   background-image: linear-gradient(270deg, var(--light) 0%, var(--light) 100%);
   background-repeat: no-repeat;
   background-size: 100% 0.2em;
   background-position: bottom;
   transition: all 0.25s ease-in;
-  font-size: 1.4rem;
+  font-size: 1.4rem; 
 }
 
 nav a:hover {
@@ -60,106 +72,96 @@ nav a:hover {
   color: var(--head);
 }
 
-h2{
-  font-size: 40px;
+ 
+
+.border {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+ 
+ 
+}
+
+.border img {
+  width: 100vw;
+  height: 100vh;
+}
+
+.border h2 {
+  background-color: var(--light);
+  padding: 20px;
+  width: 201px;
+  color: #024e76;
+  position: absolute;
+  bottom: 49px;
+  right: 20px;
+}
+
+.about {
+  display: flex;
+  text-align: center;
+  line-height: 75px;
+}
+
+.about h2 {
+  font-size: 55px;
+  color: var(--head);
+  margin-bottom: 35px;
+  padding: 0 100px 20px 100px;
+  border-right: 3px solid;
+  border-color: var(--head);
+  
+}
+
+.about p {
+  margin: auto;
+  width: 90%;
+  font-size: 20px;
+  color: var(--head);
 }
 
 .work {
-  margin: 15px;
-  display:flex;
-  flex-direction: row;
-  padding: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: flex;
+  text-align: center;
+  line-height: 75px;
 }
 
-.responsive{
-  margin: 15px;
+.work h2 {
+  font-size: 55px;
+  color: var(--head);
+  margin-bottom: 35px;
+  padding: 0 161px 20px 100px;
+  border-right: 3px solid;
+  border-color: var(--head);
 }
 
-.border img { 
+.responsive {
   width: 100%;
-  height: 200px;
-}
-
-.border{
-  position: relative;
-}
-
-.bottomright {
-  background-color: var(--light);
-  border-color: var(--light) ;
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-
-}
-
-.bottomleft{
-  position: absolute;
-  margin-bottom: 8px;
-  margin-left: 10px;
-
-}
-
-.pictures img {
-  max-height: 200px;
-
-}
-
-
-#recent {
-  max-width: auto;
+  margin: 0 auto;
   display: flex;
-  max-height: 200px;
-  margin: 40px;
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+  
+  
 }
 
-.card {
-  text-decoration: underline;
-  padding: 5px 10px;
-  color: var(--light);
-  margin-right: 10px;
-  background-image: linear-gradient(270deg, var(--head) 0%, var(--head) 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 0.2em;
-  background-position: bottom;
-  transition: all 0.25s ease-in;
-  font-size: 1.4rem;
-}
-
-.card li{
-  display: inline;
-  padding: 35px;
-}
-
-.card li:hover {
-  background-color: var(--head);
-  color: var(--light);
-}
-
-.contact {
-  display: flex;
-
+.responsive img {
+  float: left;
+  width:  100px;
+  height: 100px;
+  object-fit: cover;
 }
 
 
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
-  h2.bottomright {
-    display: flex;
-  font-size: 150%;
-  }
-}
 
-  @media only screen and (max-width: 500px) {
-    .responsive {
-      width: 100%;
-    }
-  } 
+
+
+
+
 
   
 
