@@ -139,22 +139,52 @@ nav a:hover {
 }
 
 .responsive {
+  
   width: 100%;
   margin: 0 auto;
   display: flex;
   flex: 25%;
   max-width: 25%;
-  padding: 0 4px;
-  
+  padding: 0 4px; 
   
 }
+  
 
 .responsive img {
+  
   float: left;
   width:  100px;
   height: 100px;
   object-fit: cover;
+  border-color: var(--light);
+  border-width: 5px;
+  border-style: solid; 
 }
+
+.contact {
+  display: flex;
+  text-align: center;
+  line-height: 75px;
+}
+
+.contact h2 {
+  font-size: 50px;
+  color: var(--head);
+  margin-bottom: 35px;
+  padding: 0 30px 0px 100px;
+  border-right: 3px solid;
+  border-color: var(--head);
+}
+
+.contact ul li {
+  font-size: 40px;
+  display: inline-flex;
+  justify-content: space-evenly;
+  
+}
+
+
+
 
 
 
